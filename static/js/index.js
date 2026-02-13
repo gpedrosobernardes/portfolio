@@ -54,4 +54,14 @@ document.addEventListener("DOMContentLoaded", function () {
     loadTheme();
     setAgeAtDOM();
     setAboutVisible();
+
+    // Inicializar AOS (Animate On Scroll)
+    AOS.init({
+        duration: 800, // Duração da animação em ms
+        easing: 'ease-out-cubic', // Tipo de easing
+        once: true, // Animar apenas uma vez
+        offset: 100, // Offset (em px) do ponto de trigger original
+        delay: 0, // Delay padrão
+        anchorPlacement: 'top-bottom', // Define onde a animação será disparada
+    });
 });

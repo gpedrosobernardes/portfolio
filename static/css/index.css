@@ -7,23 +7,38 @@ html {
 }
 
 .highlight-on-hover {
-  transition: transform 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .highlight-on-hover:hover {
-  transform: scale(1.1);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .card {
   min-height: 16rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .badge {
   font-size: 2rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.badge:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .icon-link {
   font-size: 1.32rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.icon-link:hover {
+  transform: translateX(5px);
 }
 
 .project-item {
@@ -32,4 +47,34 @@ html {
 
 .header-item {
   flex: 1 0 540px;
+}
+
+/* Animação para botões */
+.btn {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* Animação para imagens */
+img {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+/* Animação suave para o tema escuro */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }

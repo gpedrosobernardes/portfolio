@@ -9,7 +9,7 @@ function setCurrentTheme(theme) {
 }
 
 function syncThemeButton(theme) {
-    document.getElementById("btn-check-outlined").checked = theme === "dark" ? true : false;
+    document.getElementById("theme-change-button").checked = theme === "dark" ? true : false;
 }
 
 function onThemeChange() {
@@ -54,6 +54,12 @@ document.addEventListener("DOMContentLoaded", function () {
     loadTheme();
     setAgeAtDOM();
     setAboutVisible();
+
+    // Adicionar event listener para o botão de tema
+    const themeButton = document.getElementById("theme-change-button");
+    if (themeButton) {
+        themeButton.addEventListener("change", onThemeChange);
+    }
 
     // Inicializar AOS (Animate On Scroll)
     AOS.init({
